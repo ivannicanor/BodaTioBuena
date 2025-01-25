@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../assets/css/general.css">
+    <link rel="stylesheet" href="../assets/css/contacto.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img src="../assets/imagenes/IMG_9840.jpg" alt="Logo"></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/DetallesEvento.html">Detalles del Evento</a></li>
+                <li><a href="../pages/Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="contact-title">Contáctanos</h2>
+                <p class="contact-description">Si tienes alguna pregunta o necesitas más información, por favor, no dudes en contactarnos a través del formulario a continuación.</p>
+
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar</button>
+                </form>
+
+                <div id="form-response" class="form-response"></div>
+                 <!-- Redes Sociales -->
+                 <div class="social-container">
+                    <a href="https://wa.me/1234567890" target="_blank" class="social-link">
+                        <img src="../assets/imagenes/whatts.png" alt="WhatsApp">
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://www.instagram.com/tu_perfil/" target="_blank" class="social-link">
+                        <img src="../assets/imagenes/insta.png" alt="Instagram">
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Luis y Mamen. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../assets/js/contacto.js"></script>
+</body>
+</html>

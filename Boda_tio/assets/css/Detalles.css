@@ -1,0 +1,92 @@
+/* Sección Lugar de Celebración */
+#location .container{
+    max-width: 1400px;
+}
+.location-section {
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.location-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #0A1F44;
+}
+
+.location-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location-card {
+    background-color: #0A1F44;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    border-top-left-radius: 0.5rem; /* Bordes redondeados arriba a la izquierda */
+    border-top-right-radius: 0.5rem; /* Bordes redondeados arriba a la derecha */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.location-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.location-card p {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+}
+
+.location-map iframe {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.location-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.location-features {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.feature-card {
+    background-color: #0A1F44;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 27%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card img {
+    width: 50px;
+    margin-bottom: 1rem;
+}
+
+.feature-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    font-size: 1rem;
+}
