@@ -1,6 +1,6 @@
 /* General */
 .hero {
-    background: url(../imagenes/53853-boda.jpeg) no-repeat top center/cover;
+    background: url(../imagenes/portada.jpg) no-repeat center center/cover;
     height: 91vh;
     min-height: 600px;
     margin-top: 5rem;
@@ -20,7 +20,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem 0;
+    padding: 2rem 0;
 }
 
 .container p {
@@ -28,6 +28,7 @@
     line-height: 1.625;
     font-size: 1.125rem;
     text-align: center;
+    padding: 0 3rem;
 }
 
 .container h1 {
@@ -36,10 +37,9 @@
     font-weight: 300;
 }
 
-/* Grid Images */
+/* Grid Images - modificada para Swiper */
 .gridImages {
     background-color: #fff; /* Fondo blanco para contraste */
-    padding: 2rem; /* Espaciado general */
 }
 
 .gridImages h2 {
@@ -49,67 +49,96 @@
     font-size: 2rem;
 }
 
-/* Configuración del grid */
+/* Antigua configuración del grid (comentada)
 .gridImages .gridImages__item {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Por defecto: 3 columnas */
-    gap: 1.5rem; /* Espaciado entre columnas y filas */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
     max-width: 1200px;
 }
+*/
 
-/* Contenedores de imágenes */
-.gridImages .gridImages__item div {
+/* Estilos para el slider Swiper */
+.gridImages .swiper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #0A1F44;
+}
+
+.gridImages .swiper-slide {
+    /* La estructura interna se gestiona en el contenedor .grid-carts */
+}
+
+/* Contenedor de cada imagen */
+.gridImages .grid-carts {
     border-radius: 0.5rem;
     aspect-ratio: 4 / 3;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera inicial */
-    transition: all 0.3s ease; /* Transición para sombras y bordes */
-    border-top-right-radius: 50px; /* Borde redondeado inicial */
     position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
-/* Superposición inicial (visible) */
-.gridImages .gridImages__item .overlay {
+
+/* Hover sobre el contenedor */
+.gridImages .grid-carts:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Overlay de cada imagen */
+.gridImages .grid-carts .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Negro semitransparente */
-    transition: opacity 0.3s ease; /* Suaviza el efecto al eliminar la superposición */
-    opacity: .7; /* Visible por defecto */
-}
-main .gridImages .gridImages__item .overlay.hiddenOverlay{
-    opacity: 0;
-}
-.gridImages .gridImages__item div:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada al hacer hover */
-    border-top-right-radius: 0.5rem; /* Cambia el borde al hacer hover */
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+    opacity: 0.7;
 }
 
-
-/* Imágenes */
-.gridImages .gridImages__item img {
+/* Estilos para la imagen */
+.gridImages .grid-carts img {
     object-fit: cover;
-    height: 100%;
     width: 100%;
-    transition: transform 0.3s ease; /* Suavidad del zoom */
+    height: 100%;
+    transition: transform 0.3s ease;
+    display: block;
 }
 
-.gridImages .gridImages__item div:hover img {
-    transform: scale(1.1); /* Zoom suave en la imagen al hacer hover */
+/* Zoom al hacer hover */
+.gridImages .grid-carts:hover img {
+    transform: scale(1.1);
 }
-.event-detail{
+
+/* Personalización de controles Swiper (opcional) */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #0A1F44; /* Color acorde al diseño */
+}
+
+.swiper-pagination-bullet {
+    background: white;
+    opacity: .5;
+}
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+}
+
+/* Event Detail */
+.event-detail {
     background-color: #fff;
     color: black;
-    
 }
-.event-detail h1{
+
+.event-detail h1 {
     font-size: 2.25rem;
     line-height: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
 }
-.event-detail .event-container{
+
+.event-detail .event-container {
     padding-bottom: 2.5rem;
     color: #fff;
     display: flex;
@@ -121,31 +150,36 @@ main .gridImages .gridImages__item .overlay.hiddenOverlay{
     max-width: 1200px;
     margin: 0 auto;
 }
-.event-detail .event-container .cart{
+
+.event-detail .event-container .cart {
     background-color: #0A1F44;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     width: 33%;
 }
-.event-detail .event-container .cart img{
+
+.event-detail .event-container .cart img {
     width: 32px;
     color: #0e96d7;
 }
-.event-detail .event-container .cart h2{
 
+.event-detail .event-container .cart h2 {
+    /* Estilo opcional */
 }
-.event-detail .event-container .cart p{
+
+.event-detail .event-container .cart p > a {
+    color: #0e96d7;
 
 }
 
 /* Sección de cuenta atrás */
 .countdown-container {
-    background-color: #0A1F44; /* Fondo oscuro para consistencia con el diseño */
-    color: #fff; /* Texto blanco */
+    background-color: #0A1F44;
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -164,12 +198,11 @@ main .gridImages .gridImages__item .overlay.hiddenOverlay{
 
 .countdown-timer {
     display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: center;
-        gap: 6.5rem;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
 }
 
 .time-box {
@@ -181,68 +214,41 @@ main .gridImages .gridImages__item .overlay.hiddenOverlay{
     align-items: center;
     padding: 1.5rem;
     border-radius: 0.5rem;
-    width: 120px;
+    width: 40%;
     height: 120px;
-    box-shadow: 0 10px 20px rgba(32, 58, 94, 0.3); /* Sombra más grande y con un tono azul */
+    box-shadow: 0 10px 20px rgba(32, 58, 94, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    width: 12%;
 }
 
-.time-box:hover {
-    transform: translateY(-10px); /* Levitación más visible */
-}
-/* Sombra roja */
-.time-box.red:hover {
-    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.5); /* Roja */
-}
 
-/* Sombra verde */
-.time-box.green:hover {
-    box-shadow: 0 15px 30px rgba(0, 255, 0, 0.5); /* Verde */
-}
-
-/* Sombra azul */
-.time-box.blue:hover {
-    box-shadow: 0 15px 30px rgba(0, 0, 255, 0.5); /* Azul */
-}
-
-/* Sombra amarilla */
-.time-box.yellow:hover {
-    box-shadow: 0 15px 30px rgba(255, 255, 0, 0.5); /* Amarilla */
-}
 .time-label {
-    font-size: 2.2rem; /* Tamaño aumentado */
+    font-size: 2.2rem;
     margin-bottom: 0.5rem;
     font-weight: bold;
-    color: #0A1F44; /* Azul brillante */
+    color: #0A1F44;
 }
 
 .time-value {
-    font-size: 2rem; /* Tamaño aumentado */
+    font-size: 2rem;
     font-weight: bold;
 }
 
-
-
 /* Media Query: Pantallas medianas */
 @media (max-width: 768px) {
-    .gridImages .gridImages__item {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    .gridImages .swiper {
+        max-width: 100%;
     }
     .countdown-timer {
-        gap: 1rem; /* Reduce el espaciado en pantallas pequeñas */
+        gap: 1rem;
     }
-
     .time-box {
         width: 100px;
         height: 100px;
     }
-
     .time-value {
-        font-size: 1.5rem; /* Ajuste en pantallas medianas */
+        font-size: 1.5rem;
     }
-
     .time-label {
         font-size: 1rem;
     }
@@ -250,23 +256,35 @@ main .gridImages .gridImages__item .overlay.hiddenOverlay{
 
 /* Media Query: Pantallas pequeñas */
 @media (max-width: 480px) {
-    .gridImages .gridImages__item {
-        grid-template-columns: 1fr; /* 1 columna */
+    .gridImages .swiper {
+        max-width: 100%;
     }
-    .countdown-container {
-        padding: 1.5rem;
+    /* Estilos para el slider Swiper */
+    .gridImages .swiper {
+        background-color: white;
     }
-
     .time-box {
-        width: 80px;
+        width: auto;
         height: 80px;
     }
-
-    .time-value {
-        font-size: 1.2rem;
-    }
-
     .time-label {
-        font-size: 0.9rem;
+        font-size: 2rem;
+    }
+    .time-value {
+        font-size: 1.5rem;
+    }
+    .event-detail .event-container .cart {
+        width: auto;
+    }
+    .event-detail .event-container {
+        flex-direction: column;
+    }
+    .countdown-timer {
+        display: flex;
+        flex-direction: column;
+    }
+    .time-box {
+        width: 85%;
+        height: 80px;
     }
 }

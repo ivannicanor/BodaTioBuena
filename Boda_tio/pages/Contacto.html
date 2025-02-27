@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +10,22 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><img src="../assets/imagenes/IMG_9840.jpg" alt="Logo"></li>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/DetallesEvento.html">Detalles del Evento</a></li>
-                <li><a href="../pages/Contacto.html">Contacto</a></li>
-            </ul>
+          <div class="logo">
+            <img src="../assets/imagenes/IMG_9840.jpg" alt="Logo" />
+          </div>
+          <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./pages/DetallesEvento.html">Detalles del evento</a></li>
+            <li><a href="./pages/Contacto.html">Contacto</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
+      
 
     <main>
         <section class="contact-section">
@@ -25,6 +33,7 @@
                 <h2 class="contact-title">Contáctanos</h2>
                 <p class="contact-description">Si tienes alguna pregunta o necesitas más información, por favor, no dudes en contactarnos a través del formulario a continuación.</p>
 
+                <!-- Formulario de Contacto General -->
                 <form id="contact-form" class="contact-form">
                     <div class="form-group">
                         <label for="name">Nombre:</label>
@@ -42,8 +51,39 @@
                 </form>
 
                 <div id="form-response" class="form-response"></div>
-                 <!-- Redes Sociales -->
-                 <div class="social-container">
+
+                <!-- Formulario de Registro de Participantes -->
+                <h2 class="contact-title">Registro de Participantes</h2>
+                <form action="../assets/php/insert_participante.php" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre_participante">Nombre:</label>
+                        <input type="text" id="nombre_participante" name="nombre" placeholder="Nombre del participante" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cantidad">Número de Participantes:</label>
+                        <input type="number" id="cantidad" name="participantes" placeholder="Número de personas" required>
+                    </div>
+                    <button type="submit" class="submit-button">Guardar Participante</button>
+                </form>
+
+                <hr>
+
+                <!-- Formulario de Registro de Alergenos -->
+                <h2 class="contact-title">Registro de Alergias</h2>
+                <form action="../assets/php/insert_alergeno.php" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre_alergeno">Nombre:</label>
+                        <input type="text" id="nombre_alergeno" name="nombre" placeholder="Nombre de la persona" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="alergias">Alergias (separadas por comas):</label>
+                        <textarea id="alergias" name="alergias" placeholder="Ejemplo: Gluten, Lácteos, Frutos Secos" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Guardar Alergias</button>
+                </form>
+
+                <!-- Redes Sociales -->
+                <div class="social-container">
                     <a href="https://wa.me/1234567890" target="_blank" class="social-link">
                         <img src="../assets/imagenes/whatts.png" alt="WhatsApp">
                         <span>WhatsApp</span>
@@ -62,5 +102,7 @@
     </footer>
 
     <script src="../assets/js/contacto.js"></script>
+    <script src="../assets/js/header.js"></script>
 </body>
 </html>
+    

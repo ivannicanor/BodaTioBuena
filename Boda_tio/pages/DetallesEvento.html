@@ -10,14 +10,22 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><img src="../assets/imagenes/IMG_9840.jpg" alt=""></li>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/DetallesEvento.html">Detalles del evento</a></li>
-                <li><a href="../pages/Contacto.html">Contacto</a></li>
-            </ul>
+          <div class="logo">
+            <img src="../assets/imagenes/IMG_9840.jpg" alt="Logo" />
+          </div>
+          <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./pages/DetallesEvento.html">Detalles del evento</a></li>
+            <li><a href="./pages/Contacto.html">Contacto</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
+      
 
     <main>
         <section id="location" class="location-section">
@@ -62,5 +70,6 @@
     </footer>
 
     <script src="../assets/js/detalles.js"></script>
+    <script src="../assets/js/header.js"></script>
 </body>
 </html>

@@ -1,16 +1,4 @@
 
-// Seleccionamos el header
-const header = document.querySelector('header');
-
-// Añadimos un evento de scroll para el header
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
-
 // Seleccionamos todos los contenedores que queremos animar
 const animatedContainers = document.querySelectorAll('.animate-on-scroll');
 
