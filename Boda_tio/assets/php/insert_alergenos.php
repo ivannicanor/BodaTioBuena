@@ -1,28 +1,47 @@
 <?php
+header('Content-Type: application/json');
 include 'conexion.php'; // Conectar a la base de datos
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = $_POST["nombre"];
-    $alergias = $_POST["alergias"];
+    if (isset($_POST["nombre"]) && isset($_POST["alergias"])) {
+        $nombre = $_POST["nombre"];
+        $alergias = $_POST["alergias"];
 
-    // Preparar la consulta
-    $sql = "INSERT INTO Alergenos (nombre, alergias) VALUES (?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $nombre, $alergias);
+        // Preparar la consulta
+        $sql = "INSERT INTO Alergenos (nombre, alergias) VALUES (?, ?)";
+        $stmt = $conn->prepare($sql);
+        if (!$stmt) {
+            echo json_encode([
+                "status" => "error",
+                "message" => "Error en la preparación de la consulta."
+            ]);
+            exit;
+        }
+        $stmt->bind_param("ss", $nombre, $alergias);
 
-    if ($stmt->execute()) {
-        echo "<script>
-                alert('Tu mensaje ha quedado registrado.');
-                window.location.href = '../../index.html';
-              </script>";
+        if ($stmt->execute()) {
+            echo json_encode([
+                "status" => "success",
+                "message" => "Alergeno registrado correctamente."
+            ]);
+        } else {
+            echo json_encode([
+                "status" => "error",
+                "message" => "Error al registrar alergeno."
+            ]);
+        }
+        $stmt->close();
+        $conn->close();
     } else {
-        echo "<script>
-                alert('Error al guardar. Inténtalo de nuevo.');
-                window.history.back();
-              </script>";
+        echo json_encode([
+            "status" => "error",
+            "message" => "Parámetros faltantes."
+        ]);
     }
-
-    $stmt->close();
-    $conn->close();
+} else {
+    echo json_encode([
+        "status" => "error",
+        "message" => "Método HTTP no permitido."
+    ]);
 }
 ?>

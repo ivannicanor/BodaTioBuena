@@ -34,7 +34,6 @@
           <ul class="nav-menu" id="nav-menu">
             <li><a href="./index.html">Inicio</a></li>
             <li><a href="./pages/detallesEvento.html">Detalles del evento</a></li>
-            <li><a href="./pages/contacto.html">Contacto</a></li>
           </ul>
         </nav>
       </header>
@@ -170,6 +169,12 @@
                     <h2>Lugar</h2>
                     <p><a href="https://www.google.com/maps/search/?api=1&query=Complejo+rural+granja+Abril" target="_blank">Complejo rural granja Abril</a></p>
                 </div>
+                <div class="cart confirm">
+                    <img src="./assets/imagenes/anillo.png" alt="Confirmar Asistencia">
+                    <h2>Confirmar Asistencia</h2>
+                    <p>¿Vas a acompañarnos en este día tan especial?</p>
+                    <button id="openAsistenciaBtn" class="submit-button">confirmar asistencia</button>
+                </div>
             </div>
         </section>
         <section class="countdown-container animate-on-scroll">
@@ -193,6 +198,25 @@
                 </div>
             </div>
         </section>
+        <!-- Pop-up (modal) para Registro de Participantes -->
+<div class="asistencia-overlay" id="asistenciaOverlay">
+    <div class="asistencia-modal" id="asistenciaModal">
+      <button class="close-modal" id="closeAsistenciaBtn">&times;</button>
+      <h2>Registro de Participantes</h2>
+      <form id="asistenciaForm">
+        <div class="form-group">
+          <label for="nombre_participante">Nombre:</label>
+          <input type="text" id="nombre_participante" name="nombre" placeholder="Nombre del participante" required>
+        </div>
+        <div class="form-group">
+          <label for="cantidad">Número de Participantes:</label>
+          <input type="number" id="cantidad" name="participantes" placeholder="Número de personas" required>
+        </div>
+        <button type="submit" class="submit-button">Guardar Participante</button>
+      </form>
+      <div id="asistenciaResponse"></div>
+    </div>
+  </div>
     </main>
     <footer></footer>
 

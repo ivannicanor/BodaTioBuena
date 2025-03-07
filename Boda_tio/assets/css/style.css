@@ -39,12 +39,14 @@
 
 /* Grid Images - modificada para Swiper */
 .gridImages {
-    background-color: #fff; /* Fondo blanco para contraste */
+    background-color: #fff;
+    /* Fondo blanco para contraste */
 }
 
 .gridImages h2 {
     margin-bottom: 3rem;
-    color: black; /* Título en negro */
+    color: black;
+    /* Título en negro */
     text-align: center;
     font-size: 2rem;
 }
@@ -114,13 +116,15 @@
 /* Personalización de controles Swiper (opcional) */
 .swiper-button-prev,
 .swiper-button-next {
-    color: #0A1F44; /* Color acorde al diseño */
+    color: #0A1F44;
+    /* Color acorde al diseño */
 }
 
 .swiper-pagination-bullet {
     background: white;
     opacity: .5;
 }
+
 .swiper-pagination-bullet-active {
     opacity: var(--swiper-pagination-bullet-opacity, 1);
 }
@@ -166,15 +170,161 @@
     width: 32px;
     color: #0e96d7;
 }
+.event-detail .event-container .cart.confirm > p {
+    padding: 0 40px;
+    text-align: center;
+}
+.event-detail .event-container .cart.confirm > button {
+        display: block;
+       color: #fff;
+       background-color: #0e96d7;
+       border: none;
+       padding: .5rem 1rem;
+       border-radius: 4px;
+       text-decoration: none;
+       margin: 5px auto 0;
+       width: 50%;
+       cursor: pointer;
+}
 
 .event-detail .event-container .cart h2 {
     /* Estilo opcional */
 }
 
-.event-detail .event-container .cart p > a {
+.event-detail .event-container .cart p>a {
     color: #0e96d7;
 
 }
+
+/* ===== Estilos para el pop-up de Registro de Participantes ===== */
+.asistencia-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none; /* Se mostrará al añadir la clase .show */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* Mostrar el overlay cuando tenga la clase .show */
+  .asistencia-overlay.show {
+    display: flex;
+  }
+  
+  /* Contenedor modal */
+  .asistencia-modal {
+    background-color: #fff;
+    color: #0A1F44;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Botón para cerrar el modal */
+  .close-modal {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  
+  /* Título del modal */
+  .asistencia-modal h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilos para los grupos del formulario */
+  .asistencia-modal .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .asistencia-modal .form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #0A1F44;
+    margin-bottom: 0.5rem;
+  }
+  
+  .asistencia-modal .form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .asistencia-modal .form-group input:focus {
+    border-color: #0A1F44;
+    outline: none;
+  }
+  
+  /* Botón de envío */
+  .asistencia-modal .submit-button {
+    display: block;
+    background-color: #0A1F44;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .asistencia-modal .submit-button:hover {
+    background-color: #09275a;
+  }
+  
+  /* Mensaje de respuesta */
+  #asistenciaResponse {
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #0A1F44;
+  }
+  
+  /* ===== Ajustes Responsivos ===== */
+  /* Para dispositivos móviles en vertical */
+  @media (max-width: 480px) {
+    .asistencia-modal {
+      width: 100%;
+      max-width: 80%;
+      padding: 1.5rem;
+    }
+    
+    .asistencia-modal h2 {
+      font-size: 1.5rem;
+    }
+    
+    .asistencia-modal .submit-button {
+      padding: 0.8rem;
+    }
+  }
+  
+  /* Para móviles en horizontal o pantallas pequeñas */
+  @media only screen and (max-width: 768px) and (orientation: landscape) {
+    .asistencia-modal {
+      width: 80%;
+      max-width: 500px;
+    }
+  }
+  
 
 /* Sección de cuenta atrás */
 .countdown-container {
@@ -184,7 +334,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     margin-top: 2rem;
     border-radius: 0.5rem;
 }
@@ -239,16 +389,20 @@
     .gridImages .swiper {
         max-width: 100%;
     }
+
     .countdown-timer {
-        gap: 1rem;
+        gap: .7rem;
     }
+
     .time-box {
         width: 100px;
         height: 100px;
     }
+
     .time-value {
         font-size: 1.5rem;
     }
+
     .time-label {
         font-size: 1rem;
     }
@@ -259,32 +413,41 @@
     .gridImages .swiper {
         max-width: 100%;
     }
+
     /* Estilos para el slider Swiper */
     .gridImages .swiper {
         background-color: white;
     }
+
     .time-box {
         width: auto;
         height: 80px;
     }
+
     .time-label {
         font-size: 2rem;
     }
+
     .time-value {
         font-size: 1.5rem;
     }
+
     .event-detail .event-container .cart {
         width: auto;
     }
+
     .event-detail .event-container {
         flex-direction: column;
     }
+
     .countdown-timer {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
+
     .time-box {
-        width: 85%;
+        width: 32%;
         height: 80px;
     }
 }
