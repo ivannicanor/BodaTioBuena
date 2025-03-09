@@ -181,6 +181,23 @@
                     <p>¿Vas a acompañarnos en este día tan especial?</p>
                     <button id="openAsistenciaBtn" class="submit-button">Confirmar asistencia</button>
                 </div>
+                <div class="cart parking">
+                    <img src="../assets/imagenes/furgo.png" alt="Parking">
+                    <h4>Parking</h4>
+                    <p>Amplio parking gratuito disponible en la finca</p>
+                  </div>
+                  <div class="cart menu">
+                    <img src="../assets/imagenes/cubiertos.png" alt="Menú">
+                    <h4>Menú</h4>
+                    <p>Cocina mediterránea con opciones vegetarianas</p>
+                    <button id="openAlergiasBtn"><span>Alergias</span></button>
+                  </div>
+                  <div class="cart apartamento">
+                    <img src="../assets/imagenes/apartamento.png" alt="Alojamiento">
+                    <h4>Alojamiento</h4>
+                    <p>Hoteles cercanos disponibles</p>
+                    <a href="https://hostalycasasruralescazalegas.com/"><span>Mas Info</span></button></a>
+                  </div>
             </div>
         </section>
         <section class="countdown-container animate-on-scroll">
@@ -223,8 +240,32 @@
       <div id="asistenciaResponse"></div>
     </div>
   </div>
+
+<!-- detalles pop up -->
+  <!-- Pop-up (modal) para registrar alergias -->
+  <div class="alergias-overlay" id="alergiasOverlay">
+    <div class="alergias-modal" id="alergiasModal">
+      <button class="close-modal" id="closeAlergiasBtn">&times;</button>
+      <h2>Registro de Alergias</h2>
+      <form id="alergiasForm">
+        <div class="form-group">
+          <label for="nombre_alergeno">Nombre:</label>
+          <input type="text" id="nombre_alergeno" name="nombre" placeholder="Nombre de la persona" required>
+        </div>
+        <div class="form-group">
+          <label for="alergias"><span>Alergias</span>(separadas por comas)<span></span></label>
+          <textarea id="alergias" name="alergias" placeholder="Ejemplo: Gluten, Lácteos, Frutos Secos" rows="3"
+            required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Guardar Alergias</button>
+      </form>
+      <div id="alergiasResponse"></div>
+    </div>
+  </div>
+
     </main>
     <footer></footer>
+
 
     <!-- Fancybox JS -->
     <script type="module">
