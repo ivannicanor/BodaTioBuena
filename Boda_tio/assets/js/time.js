@@ -1,6 +1,6 @@
 import { DateTime } from "https://cdn.jsdelivr.net/npm/luxon/build/es6/luxon.min.js";
 
-const targetDate = DateTime.local(2025, 6, 21); // Fecha objetivo: 21 de junio de 2025
+const targetDate = DateTime.local(2025, 6, 21, 19, 30); // Fecha objetivo: 21 de junio de 2025 a las 19:30
 
 const updateCountdown = () => {
   const now = DateTime.local();

@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detalles del Evento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/detalles.css">
   <link rel="stylesheet" href="../assets/css/general.css">
 </head>
@@ -13,7 +16,9 @@
   <header>
     <nav>
       <div class="logo">
-        <img src="../assets/imagenes/IMG_9840.jpg" alt="Logo" />
+        <a href="../index.html">
+          <img src="../assets/imagenes/IMG_9840.jpg" alt="Logo" />
+        </a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Menú">
         <span class="bar"></span>
@@ -22,7 +27,7 @@
       </button>
       <ul class="nav-menu" id="nav-menu">
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../pages/detallesEvento.html">Detalles del evento</a></li>
+        <li><a href="../assets/php/galeria.php">Galeria de fotos</a></li>
       </ul>
     </nav>
   </header>
@@ -35,7 +40,7 @@
         <div class="location-info">
           <div class="location-card">
             <h3>Granja Abril</h3>
-            <p>Cardiel de los montes, toledo</p>
+            <p>Cardiel de los montes, Toledo</p>
           </div>
         </div>
         <div class="location-map">
@@ -59,12 +64,13 @@
             <img src="../assets/imagenes/cubiertos.png" alt="Menú">
             <h4>Menú</h4>
             <p>Cocina mediterránea con opciones vegetarianas</p>
-            <button id="openAlergiasBtn">Alergias</button>
+            <button id="openAlergiasBtn"><span>Alergias</span></button>
           </div>
           <div class="feature-card apartamento">
             <img src="../assets/imagenes/apartamento.png" alt="Alojamiento">
             <h4>Alojamiento</h4>
             <p>Hoteles cercanos disponibles</p>
+            <a href="https://hostalycasasruralescazalegas.com/"><span>Mas Info</span></button>
           </div>
         </div>
       </div>
@@ -80,7 +86,7 @@
             <input type="text" id="nombre_alergeno" name="nombre" placeholder="Nombre de la persona" required>
           </div>
           <div class="form-group">
-            <label for="alergias">Alergias (separadas por comas):</label>
+            <label for="alergias"><span>Alergias</span>(separadas por comas)<span></span></label>
             <textarea id="alergias" name="alergias" placeholder="Ejemplo: Gluten, Lácteos, Frutos Secos" rows="3"
               required></textarea>
           </div>

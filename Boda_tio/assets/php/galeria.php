@@ -15,7 +15,9 @@
     <header>
     <nav>
       <div class="logo">
-        <img src="../imagenes/IMG_9840.jpg" alt="Logo" />
+        <a href="../../index.html"> 
+          <img src="../imagenes/IMG_9840.jpg" alt="Logo" />
+        </a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Menú">
         <span class="bar"></span>
@@ -24,7 +26,7 @@
       </button>
       <ul class="nav-menu" id="nav-menu">
         <li><a href="../../index.html">Inicio</a></li>
-        <li><a href="../pages/detallesEvento.html">Detalles del evento</a></li>
+        <li><a href="../../pages/detallesEvento.html">Detalles del evento</a></li>
       </ul>
     </nav>
   </header>

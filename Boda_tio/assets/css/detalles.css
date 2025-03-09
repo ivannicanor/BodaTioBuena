@@ -1,242 +1,332 @@
 /* Sección Lugar de Celebración */
-#location .container{
-    max-width: 1400px;
+#location .container {
+  max-width: 1400px;
 }
+
 .location-section {
-    padding: 8rem 2rem 4rem;
-    text-align: center;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
+  padding: 8rem 2rem 4rem;
+  text-align: center;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
 }
 
 .location-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #0A1F44;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0A1F44;
 }
 
 .location-info {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .location-card {
-    background-color: #0A1F44;
-    color: #fff;
-    padding: 1.5rem 2rem;
-    border-top-left-radius: 0.5rem; /* Bordes redondeados arriba a la izquierda */
-    border-top-right-radius: 0.5rem; /* Bordes redondeados arriba a la derecha */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  background-color: #0A1F44;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  border-top-left-radius: 0.5rem;
+  /* Bordes redondeados arriba a la izquierda */
+  border-top-right-radius: 0.5rem;
+  /* Bordes redondeados arriba a la derecha */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .location-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .location-card p {
-    font-size: 1rem;
-    margin: 0.2rem 0;
+  font-size: 1rem;
+  margin: 0.2rem 0;
 }
 
 .location-map iframe {
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-height: 300px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
 }
 
 .location-description {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
 }
 
 .location-features {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
-    width: 100%;
-    flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: column;
 }
 
 .feature-card {
-    background-color: #0A1F44;
-    color: #fff;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width:auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
+  background-color: #0A1F44;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
-.feature-card.menu > button{
-    display: block;
-   color: #fff;
-   background-color: #0e96d7;
-   border: none;
-   padding: .5rem 1rem;
-   border-radius: 4px;
-   text-decoration: none;
-   margin: 30px auto 0;
-   width: 50%;
-   cursor: pointer;
+
+.feature-card.menu>button {
+  display: block;
+  color: #fff;
+  background-color: #0e96d7;
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 30px auto 0;
+  width: 50%;
+  cursor: pointer;
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .feature-card img {
-    width: 50px;
-    margin-bottom: 1rem;
+  width: 50px;
+  margin-bottom: 1rem;
 }
 
 .feature-card h4 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .feature-card p {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 /* ===== Estilos para el pop-up de Registro de Alergias ===== */
 
 /* Overlay que cubre toda la pantalla */
 .alergias-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: none; /* Se muestra cuando se añade la clase .show */
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  
-  /* Mostrar el overlay cuando tenga la clase .show */
-  .alergias-overlay.show {
-    display: flex;
-  }
-  
-  /* Contenedor modal */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  /* Se muestra cuando se añade la clase .show */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Mostrar el overlay cuando tenga la clase .show */
+.alergias-overlay.show {
+  display: flex;
+}
+
+/* Contenedor modal */
+.alergias-modal {
+  background-color: #fff;
+  color: #0A1F44;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón para cerrar el modal */
+.close-modal {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+/* Títulos del modal */
+.alergias-modal h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Estilos para los grupos del formulario */
+.alergias-modal .form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.alergias-modal .form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #0A1F44;
+  margin-bottom: 0.5rem;
+}
+
+.alergias-modal .form-group input,
+.alergias-modal .form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.alergias-modal .form-group input:focus,
+.alergias-modal .form-group textarea:focus {
+  border-color: #0A1F44;
+  outline: none;
+}
+
+/* Botón de envío del formulario */
+.alergias-modal .submit-button {
+  display: block;
+  background-color: #0A1F44;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.alergias-modal .submit-button:hover {
+  background-color: #09275a;
+}
+
+/* Estilo para el mensaje de respuesta del formulario */
+#alergiasResponse {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #0A1F44;
+}
+
+@media only screen and (max-width: 956px) and (orientation: landscape) {
   .alergias-modal {
-    background-color: #fff;
-    color: #0A1F44;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    width: 90%;
-    max-width: 400px;
-    position: relative;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    height: 70vh;
+    max-width: 500px;
+    overflow: scroll;
   }
-  
-  /* Botón para cerrar el modal */
-  .close-modal {
-    background: transparent;
-    border: none;
-    font-size: 1.5rem;
-    color: #333;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-  }
-  
-  /* Títulos del modal */
-  .alergias-modal h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  /* Estilos para los grupos del formulario */
-  .alergias-modal .form-group {
-    margin-bottom: 1.5rem;
-    text-align: left;
-  }
+  .feature-card.menu>button,
+.feature-card.apartamento>a {
+  display: block;
+  color: #fff;
+  background-color: #0e96d7;
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 30px auto 0;
+  width: 100%;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.feature-card.menu > button > span,
+.feature-card.apartamento > a > span {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";;
+}
+
   
   .alergias-modal .form-group label {
-    display: block;
-    font-size: 1rem;
-    color: #0A1F44;
-    margin-bottom: 0.5rem;
+    display: flex;
+    flex: 0 0 39%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  
-  .alergias-modal .form-group input,
-  .alergias-modal .form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
+  .alergias-modal .form-group {
+    display: flex;
+}
+
+  .location-map iframe {
     border-radius: 0.5rem;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-height: 250px;
   }
-  
-  .alergias-modal .form-group input:focus,
-  .alergias-modal .form-group textarea:focus {
-    border-color: #0A1F44;
-    outline: none;
-  }
-  
-  /* Botón de envío del formulario */
-  .alergias-modal .submit-button {
-    display: block;
+
+  .feature-card {
     background-color: #0A1F44;
     color: #fff;
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    border: none;
+    padding: 1rem;
+    width: 28%;
     border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-  }
-  
-  .alergias-modal .submit-button:hover {
-    background-color: #09275a;
-  }
-  
-  /* Estilo para el mensaje de respuesta del formulario */
-  #alergiasResponse {
-    margin-top: 1rem;
-    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    color: #0A1F44;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
-  /* ===== Ajustes Responsivos ===== */
-  
-  /* Para dispositivos móviles (vertical) */
-  @media (max-width: 480px) {
-    .alergias-modal {
-      width: 100%;
-      max-width: 80%;
-      padding: 1.5rem;
-    }
-    
-    .alergias-modal h2 {
-      font-size: 1.5rem;
-    }
-    
-    .alergias-modal .submit-button {
-      padding: 0.8rem;
-    }
+
+  .location-features {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    width: 100%;
+    flex-direction: row;
   }
-  
-  /* Para móviles en horizontal o pantallas pequeñas */
-  @media only screen and (max-width: 768px) and (orientation: landscape) {
-    .alergias-modal {
-      width: 80%;
-      max-width: 500px;
-    }
+}
+
+/* ===== Ajustes Responsivos ===== */
+
+/* Para dispositivos móviles (vertical) */
+@media (max-width: 480px) {
+  .alergias-modal {
+    width: 100%;
+    max-width: 80%;
+    padding: 1.5rem;
   }
-  
+
+  .alergias-modal h2 {
+    font-size: 1.5rem;
+  }
+
+  .alergias-modal .submit-button {
+    padding: 0.8rem;
+  }
+  .feature-card.menu>button,
+.feature-card.apartamento>a {
+  display: block;
+  color: #fff;
+  background-color: #0e96d7;
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 30px auto 0;
+  width: 100%;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.feature-card.menu > button > span,
+.feature-card.apartamento > a > span {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";;
+}
+}
+
+/* Para móviles en horizontal o pantallas pequeñas */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .alergias-modal {
+    width: 80%;
+    max-width: 500px;
+  }
+}

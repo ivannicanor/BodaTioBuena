@@ -1,18 +1,53 @@
 /* General */
 .hero {
+    position: relative; /* Para posicionar absolutamente el overlay */
     background: url(../imagenes/portada.jpg) no-repeat center center/cover;
     height: 91vh;
     min-height: 600px;
     margin-top: 5rem;
 }
+body main .history{
+    padding-bottom: 0px !important;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Color negro semi-transparente (ajusta la opacidad según desees) */
+    z-index: 1; /* Overlay sobre la imagen, pero debajo del texto */
+}
 
 .hero-text {
+    position: relative; /* Para que esté sobre el overlay */
+    z-index: 2; /* Mayor z-index que el overlay */
     color: #fff;
     display: flex;
     height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.hero-text > p {
+    font-family: "Arimo", sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+.hero-text > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-text > div > span{
+    font-family: "Alex Brush", cursive;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    font-size: 4em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .container {
@@ -65,12 +100,9 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #0A1F44;
+    background-color: white;
 }
 
-.gridImages .swiper-slide {
-    /* La estructura interna se gestiona en el contenedor .grid-carts */
-}
 
 /* Contenedor de cada imagen */
 .gridImages .grid-carts {
@@ -87,17 +119,7 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Overlay de cada imagen */
-.gridImages .grid-carts .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    transition: opacity 0.3s ease;
-    opacity: 0.7;
-}
+
 
 /* Estilos para la imagen */
 .gridImages .grid-carts img {
@@ -183,12 +205,8 @@
        border-radius: 4px;
        text-decoration: none;
        margin: 5px auto 0;
-       width: 50%;
+       width: 80%;
        cursor: pointer;
-}
-
-.event-detail .event-container .cart h2 {
-    /* Estilo opcional */
 }
 
 .event-detail .event-container .cart p>a {
@@ -299,32 +317,6 @@
     color: #0A1F44;
   }
   
-  /* ===== Ajustes Responsivos ===== */
-  /* Para dispositivos móviles en vertical */
-  @media (max-width: 480px) {
-    .asistencia-modal {
-      width: 100%;
-      max-width: 80%;
-      padding: 1.5rem;
-    }
-    
-    .asistencia-modal h2 {
-      font-size: 1.5rem;
-    }
-    
-    .asistencia-modal .submit-button {
-      padding: 0.8rem;
-    }
-  }
-  
-  /* Para móviles en horizontal o pantallas pequeñas */
-  @media only screen and (max-width: 768px) and (orientation: landscape) {
-    .asistencia-modal {
-      width: 80%;
-      max-width: 500px;
-    }
-  }
-  
 
 /* Sección de cuenta atrás */
 .countdown-container {
@@ -383,6 +375,26 @@
     font-size: 2rem;
     font-weight: bold;
 }
+
+  /* ===== Ajustes Responsivos ===== */
+  /* Para dispositivos móviles en vertical */
+  @media (max-width: 480px) {
+    .asistencia-modal {
+      width: 100%;
+      max-width: 80%;
+      padding: 1.5rem;
+    }
+    
+    .asistencia-modal h2 {
+      font-size: 1.5rem;
+    }
+    
+    .asistencia-modal .submit-button {
+      padding: 0.8rem;
+    }
+  }
+  
+
 
 /* Media Query: Pantallas medianas */
 @media (max-width: 768px) {
@@ -451,3 +463,41 @@
         height: 80px;
     }
 }
+  /* Para móviles en horizontal o pantallas pequeñas */
+  @media only screen and (max-width: 956px) and (orientation: landscape) {
+    .asistencia-modal {
+        width: 80%;
+        max-width: 500px;
+        max-height: 70vh;
+        overflow: scroll;
+    }
+    .asistencia-modal .form-group {
+        display: flex;
+        align-items: center;
+    }
+    .cart > h2{
+        font-size: 23px
+    }
+    .asistencia-modal .form-group label {
+        flex: 0 0 25%;
+    }
+    .hero {
+        background: url(../imagenes/portada.jpg) no-repeat center center / cover;
+        height: 91vh;
+        min-height: 450px;
+        margin-top: 5rem;
+    }
+    .gridImages .swiper {
+        max-width: 60%;
+    }
+    .event-detail .event-container {
+        flex-wrap: wrap;
+    }
+    .time-box {
+        width: 40%;
+        height: 100px;
+    }
+    .time-label {
+        font-size: 2rem;
+    }
+  }

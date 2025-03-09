@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Boda Luis y Mamen</title>
 
     <!-- Fancybox CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -24,17 +24,17 @@
     <header>
         <nav>
           <div class="logo">
-            <img src="./assets/imagenes/IMG_9840.jpg" alt="Logo" />
+            <a href="./index.html">
+                <img src="./assets/imagenes/IMG_9840.jpg" alt="Logo" />
+            </a>
           </div>
           <button class="hamburger" id="hamburger" aria-label="Menú">
             <span class="bar"></span>
             <span class="bar"></span>
-            <span class="bar"></span>
           </button>
           <ul class="nav-menu" id="nav-menu">
-            <li><a href="./index.html">Inicio</a></li>
             <li><a href="./pages/detallesEvento.html">Detalles del evento</a></li>
-            <li><a href="./assets/php/galeria.php">Detalles del evento</a></li>
+            <li><a href="./assets/php/galeria.php">Galeria de fotos</a></li>
           </ul>
         </nav>
       </header>
@@ -42,9 +42,14 @@
     <main>
         <section>
             <div class="hero">
+                <div class="hero-overlay"></div> <!-- Añadir este div -->
                 <div class="hero-text">
-                    <h1>Luis y Mamen</h1>
-                    <p>Nos casamos - 21.08.2024</p>
+                    <div>
+                        <span>Luis</span>
+                        <span>&</span>
+                        <span>Mamen</span>
+                    </div>
+                    <p>Nos casamos - 21.06.2025</p>
                 </div>
             </div>
         </section>
@@ -158,7 +163,7 @@
                 <div class="cart fecha">
                     <img src="./assets/imagenes/date.svg" alt="" />
                     <h2>Fecha</h2>
-                    <p>21 de Agosto de 2025</p>
+                    <p>21 de Junio de 2025</p>
                 </div>
                 <div class="cart hora">
                     <img src="./assets/imagenes/time.svg" alt="" />
@@ -174,7 +179,7 @@
                     <img src="./assets/imagenes/anillo.png" alt="Confirmar Asistencia">
                     <h2>Confirmar Asistencia</h2>
                     <p>¿Vas a acompañarnos en este día tan especial?</p>
-                    <button id="openAsistenciaBtn" class="submit-button">confirmar asistencia</button>
+                    <button id="openAsistenciaBtn" class="submit-button">Confirmar asistencia</button>
                 </div>
             </div>
         </section>
